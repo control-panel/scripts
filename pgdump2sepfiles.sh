@@ -1,5 +1,15 @@
 #!/bin/bash
 
+#
+# simple script for logical backing up of postgresql DBs to separate files
+# and automatic clean up of old backups
+# is inteded to use with cron or another scheduler
+# 
+# aims:
+#   - add logging
+#   - add mailing errors
+#
+
 BACKUP_ROOT="/srv/local_backup/postgresql"
 TIMESTAMP=$(date +"%F")
 BACKUP_DIR="$BACKUP_ROOT/$TIMESTAMP/"
